@@ -1,5 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #2D9596;
+    width: 100%;
 }
 
 header {
@@ -7,25 +10,62 @@ header {
 }
 
 header h1 {
-    background-color: yellow;
-    color: green;
+    background-color: #265073;
+    color: black;
+    margin: 0;
 }
 
-header h4 {
-    margin-top: 32px;
-    background-color: yellow;
-    color: green;
+header h2 {
+    margin-top: 20px;
+    color: #ECF4D6;
 }
 
 header p {
     margin-top: -10px;
     font-size: small;
-    color: greenyellow;
+    color: #9AD0C2;
 }
 
 .inputSection {
     display: flex;
     flex-direction: column;
+    background-color: #265073;
+}
+
+#title {
+    font-family:cursive;
+    color: #ECF4D6;
+}
+
+#titleStandsFor {
+    font-size: 16px;
+    font-family: cursive;
+    color: #ECF4D6;
+}
+
+.squareArea {
+    text-align: center;
+    color: #ECF4D6;
+    border: 1px solid #ECF4D6;
+    padding: 20px;
+    background-color: #265073;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#formulaDesc {
+    text-align: left;
+}
+
+#lblSquareSide {
+    padding: 20px;
+    text-align: center;
+    margin-top: -10px;
+    color: #ECF4D6;
+    font-size: 24px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 #squareSide{
@@ -33,15 +73,16 @@ header p {
     outline: none;
     border-radius: 16px;
     border: solid darkgrey;
+    margin: 10px;
     padding: 10px;
 }
 
 #squareSide:focus {
-    border: solid black;
+    border: solid #272829;
 }
 
 button {
-    background-color: black;
+    background-color: #272829;
     color: white;
     border: none;
     border-radius: 16px;
