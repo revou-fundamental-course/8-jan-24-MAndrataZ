@@ -1,21 +1,51 @@
-function squareSideCount() {
-    var squareSideValue = parseInt(document.getElementById('squareSide').value);
-    var squareAreaResult = squareSideValue * squareSideValue;
-    // Menampilkan hasil perhitungan di dalam elemen 'resultText'
-    var resultText = document.getElementById('resultText');
-    resultText.textContent = 'L = S x S\n';
-    resultText.textContent += 'L = (' + squareSideValue + ') x (' + squareSideValue + ')\n';
-    resultText.textContent += 'L = ' + squareAreaResult;
+var currentFunction = null;
 
-    // Menampilkan section hasil perhitungan
-    var resultSection = document.getElementById('resultSection');
-    resultSection.style.display = 'block';
+function squareAreaCount() {
+    currentFunction = "area";
+    var sisi = parseInt(document.getElementById('squareSide').value);
+    if (isNaN(sisi)) {
+        alert("Anda belum memasukkan nilai sisi"); //validasi
+    } else if (sisi <= 0) {
+        alert("Nilai sisi tidak bisa negatif");
+    } else {
+        var luas = sisi * sisi;
+        const resultMessageArea =
+            `<p>Luas Persegi : S x S</p>
+            <p>Luas Persegi : ${sisi} x ${sisi}</p>
+            <p><strong>Luas Persegi : ${luas}</strong></p>`;
+
+        document.getElementById("squareAreaResult").innerHTML = resultMessageArea;
+    }
 }
 
-function resetCount() {
+function squareCircumferenceCount() {
+    currentFunction = "circumference";
+    var sisi = parseInt(document.getElementById('squareSide').value);
+    if (isNaN(sisi)) {
+        alert("Anda belum memasukkan nilai sisi"); //validasi
+    } else if (sisi <= 0) {
+        alert("Nilai sisi tidak bisa negatif");
+    } else {
+        var keliling = 4 * sisi;
+        const resultMessageCircumference =
+            `<p>Keliling persegi : 4 x S</p>
+            <p>Keliling Persegi : ${4} x ${sisi}</p>
+            <p><strong>Keliling Persegi : ${keliling}</strong></p>`;
+
+        document.getElementById("squareAreaResult").innerHTML = resultMessageCircumference;
+    }
+}
+
+function resetAreaCount() {
+    // Reset input
     document.getElementById("squareSide").value = "";
-
-    // Menyembunyikan section hasil perhitungan
-    var resultSection = document.getElementById('resultSection');
-    resultSection.style.display = 'none';
+    
+    // Hapus result Message
+    document.getElementById("squareAreaResult").innerHTML = "";
+    currentFunction = null;
 }
+
+// Additional event listeners for the buttons
+document.getElementById("countAreaButton").addEventListener("click", squareAreaCount);
+document.getElementById("countCircumferenceButton").addEventListener("click", squareCircumferenceCount);
+document.getElementById("resetButton").addEventListener("click", resetAreaCount);

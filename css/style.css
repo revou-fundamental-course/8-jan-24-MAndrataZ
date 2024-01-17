@@ -43,7 +43,7 @@ header p {
     color: #ECF4D6;
 }
 
-.squareArea {
+.katikContainer {
     text-align: center;
     color: #ECF4D6;
     border: 1px solid #ECF4D6;
@@ -58,7 +58,7 @@ header p {
     text-align: left;
 }
 
-#lblSquareSide {
+#lblSquareSide{
     padding: 20px;
     text-align: center;
     margin-top: -10px;
@@ -68,7 +68,7 @@ header p {
     margin: 10px;
 }
 
-#squareSide{
+#squareSide, #squareCircumference{
     margin-top: 10px;
     outline: none;
     border-radius: 16px;
