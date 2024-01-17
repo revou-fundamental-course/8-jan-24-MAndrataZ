@@ -45,7 +45,7 @@ function resetAreaCount() {
     currentFunction = null;
 }
 
-// Additional event listeners for the buttons
+// Listener Buttons
 document.getElementById("countAreaButton").addEventListener("click", squareAreaCount);
 document.getElementById("countCircumferenceButton").addEventListener("click", squareCircumferenceCount);
 document.getElementById("resetButton").addEventListener("click", resetAreaCount);
